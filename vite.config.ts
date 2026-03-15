@@ -21,11 +21,11 @@ export default defineConfig({
     port: 3002, // 指定端口
     proxy: {
       '/api': {
-        target: process.env.NODE_ENV === 'production' ? 'https://gpushare.xkl505.top' : 'https://gpushare.xkl505.top',
+        target: process.env.NODE_ENV === 'production' ? '' : '',
         changeOrigin: true,
       },
       '/socket.io': {
-        target: process.env.NODE_ENV === 'production' ? 'https://gpushare.xkl505.top' : 'https://gpushare.xkl505.top',
+        target: process.env.NODE_ENV === 'production' ? '' : '',
         ws: true,
         changeOrigin: true,
         // 增加这些选项以解决超时问题
