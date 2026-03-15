@@ -1,0 +1,129 @@
+.system-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-card {
+  margin-bottom: 0;
+}
+
+.form-item-help {
+  color: #999;
+  font-size: 12px;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.settings-info p {
+  color: #666;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.settings-section-header h4 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-form h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.config-selector {
+  margin-bottom: 12px;
+}
+
+.schedule-status p {
+  color: #666;
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.backup-info {
+  color: #666;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.backup-info .warning {
+  color: #faad14;
+}
+
+.backup-list h5 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.backup-category h6 {
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* 编辑器 */
+.editor-container {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.editor-tabs {
+  padding: 8px 12px;
+  background: #fafafa;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.editor-wrapper {
+  min-height: 220px;
+}
+
+.editor-wrapper .ql-container {
+  min-height: 180px;
+}
+
+.markdown-tips {
+  padding: 8px 12px;
+  background: #f6f8fa;
+  border-top: 1px solid #e8e8e8;
+  font-size: 12px;
+  color: #999;
+}
+
+.markdown-tips code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.preview-wrapper {
+  min-height: 220px;
+  padding: 16px;
+}
+
+.markdown-preview {
+  line-height: 1.8;
+}
+
+.markdown-preview a { color: #1890ff; text-decoration: underline; }
+.markdown-preview code { background: rgba(0, 0, 0, 0.06); padding: 1px 4px; border-radius: 3px; }
+.markdown-preview p { margin: 4px 0; }
+
+.login-tip-item .form-item-help {
+  margin-top: 8px;
+}

@@ -1,0 +1,50 @@
+.site-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.site-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #409eff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+}
+
+.gpu-icon {
+  font-size: 22px;
+  color: white;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #303133;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 576px) {
+  .site-name {
+    font-size: 16px;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .gpu-icon {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,127 @@
+.server-detail {
+  width: 100%;
+}
+
+/* ==================== 加载 / 错误 / 空状态 ==================== */
+
+.loading-container,
+.error-container,
+.empty-container {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-icon {
+  font-size: 64px;
+  color: #94a3b8;
+}
+
+/* ==================== 服务器信息卡片 ==================== */
+
+.server-info-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+}
+
+.server-info-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.server-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.server-title h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.server-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==================== 信息行 ==================== */
+
+.server-info-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.route-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-sub {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* ==================== 监控区域 ==================== */
+
+.monitor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ==================== 移动端适配 ==================== */
+
+@media (max-width: 768px) {
+  .server-info-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .server-title h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .server-info-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

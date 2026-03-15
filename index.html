@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://lank.myzr.org:88/i/2024/05/29/66571d8de15ea.png" id="favicon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPU共享服务平台</title>
+    <script>
+      // 页面加载后获取站点设置
+      window.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const response = await fetch('/api/settings/site');
+          if (response.ok) {
+            const data = await response.json();
+            // 更新标题
+            document.title = data.site_name;
+            // 更新图标
+            const favicon = document.getElementById('favicon');
+            if (favicon && data.site_logo) {
+              favicon.href = data.site_logo;
+            }
+          }
+        } catch (error) {
+          console.error('获取站点设置失败:', error);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

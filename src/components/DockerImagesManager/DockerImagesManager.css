@@ -1,0 +1,92 @@
+.docker-images-manager {
+  margin-bottom: 20px;
+}
+
+/* ==================== 卡片头部 ==================== */
+
+.card-header-content h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #909399;
+  margin-top: 4px;
+  display: block;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ==================== 状态容器 ==================== */
+
+.loading-container,
+.error-container,
+.empty-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* ==================== 镜像列表 ==================== */
+
+.images-list {
+  margin-top: 10px;
+}
+
+.image-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.repository {
+  font-weight: 500;
+}
+
+.image-id {
+  font-size: 12px;
+  color: #909399;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* ==================== 表单 ==================== */
+
+.form-tip {
+  font-size: 12px;
+  color: #909399;
+  margin-top: -8px;
+  margin-left: 25%;
+  margin-bottom: 8px;
+}
+
+/* ==================== 任务进度 ==================== */
+
+.task-progress {
+  margin-bottom: 20px;
+}
+
+.task-logs {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #f5f7fa;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.log-line {
+  margin-bottom: 5px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

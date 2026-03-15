@@ -1,0 +1,47 @@
+.network-monitor {
+  width: 100%;
+}
+
+.network-card {
+  border-radius: 12px;
+}
+
+.network-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.network-card .card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.special-network-info {
+  margin-bottom: 16px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mt-4 h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* ==================== 移动端适配 ==================== */
+
+@media (max-width: 768px) {
+  .network-card .ant-descriptions {
+    font-size: 0.85rem;
+  }
+
+  .network-card .card-header h3 {
+    font-size: 1rem;
+  }
+}

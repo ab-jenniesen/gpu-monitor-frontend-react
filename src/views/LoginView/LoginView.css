@@ -1,0 +1,290 @@
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#earth-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ==================== 登录卡片 ==================== */
+
+.login-card {
+  width: 450px;
+  padding: 2.5rem;
+  border-radius: 15px;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-right: 8%;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 30, 0.5);
+}
+
+/* ==================== 头部 ==================== */
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+  animation: glow 2s ease-in-out infinite alternate;
+  white-space: nowrap;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px rgba(59, 130, 246, 0.7); }
+  to   { text-shadow: 0 0 20px rgba(59, 130, 246, 0.9); }
+}
+
+.subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* ==================== 表单 ==================== */
+
+.login-form {
+  margin-bottom: 1.5rem;
+}
+
+.login-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: #cbd5e1 !important;
+  font-size: 0.95rem;
+}
+
+.login-form .ant-input-affix-wrapper,
+.login-form .ant-input {
+  background-color: rgba(30, 41, 59, 0.7) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  border-radius: 8px;
+  color: #fff !important;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.login-form .ant-input-affix-wrapper:hover,
+.login-form .ant-input:hover {
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.login-form .ant-input-affix-wrapper-focused,
+.login-form .ant-input:focus {
+  border-color: rgba(59, 130, 246, 0.8) !important;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2) !important;
+}
+
+.login-form .ant-input-affix-wrapper .ant-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+/* 密码输入框眼睛图标颜色 */
+.login-form .ant-input-password-icon {
+  color: #94a3b8 !important;
+}
+
+.login-form .ant-input-password-icon:hover {
+  color: #cbd5e1 !important;
+}
+
+.input-icon {
+  font-size: 18px;
+  color: #3b82f6;
+}
+
+/* ==================== 登录按钮 ==================== */
+
+.login-button {
+  width: 100%;
+  height: auto !important;
+  padding: 12px !important;
+  font-size: 16px !important;
+  border-radius: 8px !important;
+  margin-top: 1.5rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #1e40af, #3b82f6) !important;
+  border: none !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4) !important;
+  background: linear-gradient(to right, #2563eb, #60a5fa) !important;
+}
+
+.button-icon {
+  margin-left: 5px;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.login-button:hover .button-icon {
+  transform: translateX(3px);
+}
+
+/* ==================== 底部 ==================== */
+
+.login-footer {
+  text-align: center;
+}
+
+.login-tip {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 1rem;
+  background-color: rgba(30, 41, 59, 0.5);
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.login-tip a { color: #60a5fa; text-decoration: underline; }
+.login-tip code { background: rgba(148, 163, 184, 0.2); padding: 1px 4px; border-radius: 4px; }
+.login-tip p { margin: 0.2rem 0; }
+
+.copyright {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 15px;
+}
+
+/* ==================== 移动端适配 ==================== */
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 1.8rem;
+    border-radius: 12px;
+    margin-right: 0;
+  }
+
+  .logo-container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* 小屏幕手机 */
+@media (max-width: 375px) {
+  .login-container { padding-top: 3vh; }
+  .login-card { padding: 1.5rem; }
+  .logo-container { width: 90px; height: 90px; }
+  .title { font-size: 1.6rem; }
+  .subtitle { font-size: 0.8rem; }
+  .login-button { padding: 10px !important; }
+}
+
+/* 横屏适配 */
+@media (max-height: 500px) and (orientation: landscape) {
+  .login-container {
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .login-card {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .login-header {
+    margin-bottom: 0;
+    margin-right: 2rem;
+    width: 40%;
+  }
+
+  .login-form {
+    width: 60%;
+    margin-bottom: 0;
+  }
+
+  .login-footer { display: none; }
+  .logo-container { width: 80px; height: 80px; margin-bottom: 0.8rem; }
+  .title { font-size: 1.4rem; }
+  .subtitle { font-size: 0.8rem; }
+}

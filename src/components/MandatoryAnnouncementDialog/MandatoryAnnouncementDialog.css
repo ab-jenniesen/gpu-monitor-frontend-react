@@ -1,0 +1,251 @@
+.mandatory-announcement-dialog .ant-modal-content {
+  border-radius: 26px;
+  overflow: hidden;
+  max-height: 90vh;
+  background: #f5f7fb;
+  box-shadow: 0 36px 90px rgba(10, 22, 53, 0.24);
+  padding: 0;
+}
+
+.mandatory-announcement-dialog .ant-modal-header {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  background: transparent;
+}
+
+.mandatory-announcement-dialog .ant-modal-body {
+  padding: 22px 36px;
+  background: #f5f6fc;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mandatory-announcement-dialog .ant-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 18px 32px 28px;
+  background: #f5f6fc;
+  border-top: none;
+}
+
+/* ==================== Header ==================== */
+
+.mandatory-announcement-dialog .dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 30px 36px 20px;
+  background: linear-gradient(135deg, #2733a7 0%, #4253f9 45%, #6d86ff 100%);
+  color: #ffffff;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.mandatory-announcement-dialog .dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mandatory-announcement-dialog .title-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  font-size: 26px;
+  color: #fff;
+}
+
+.mandatory-announcement-dialog .title-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mandatory-announcement-dialog .title-label {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.mandatory-announcement-dialog .dialog-header h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 620;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.mandatory-announcement-dialog .dialog-time {
+  font-size: 14px;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* ==================== Content ==================== */
+
+.mandatory-announcement-dialog .dialog-content {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 16px 40px rgba(17, 35, 79, 0.08);
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mandatory-announcement-dialog .content-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+.mandatory-announcement-dialog .markdown-body {
+  font-size: 16px;
+  line-height: 1.95;
+  color: #26314c;
+}
+
+.mandatory-announcement-dialog .markdown-body h1,
+.mandatory-announcement-dialog .markdown-body h2,
+.mandatory-announcement-dialog .markdown-body h3 {
+  color: #162459;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.mandatory-announcement-dialog .markdown-body p {
+  margin-bottom: 16px;
+}
+
+.mandatory-announcement-dialog .markdown-body a {
+  color: #4253f9;
+  text-decoration: underline;
+}
+
+.mandatory-announcement-dialog .markdown-body code {
+  background: rgba(148, 163, 184, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.mandatory-announcement-dialog .markdown-body pre {
+  background: #f8f9fc;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.mandatory-announcement-dialog .markdown-body pre code {
+  background: none;
+  padding: 0;
+}
+
+.mandatory-announcement-dialog .markdown-body img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.mandatory-announcement-dialog .markdown-body blockquote {
+  border-left: 4px solid #4253f9;
+  margin: 16px 0;
+  padding: 8px 16px;
+  background: #f0f2ff;
+  border-radius: 0 8px 8px 0;
+  color: #3d4a6e;
+}
+
+.mandatory-announcement-dialog .markdown-body ul,
+.mandatory-announcement-dialog .markdown-body ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.mandatory-announcement-dialog .markdown-body li {
+  margin-bottom: 6px;
+}
+
+/* ==================== Empty ==================== */
+
+.mandatory-announcement-dialog .empty-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #7b849f;
+  gap: 14px;
+  min-height: 260px;
+}
+
+.mandatory-announcement-dialog .empty-placeholder .anticon {
+  font-size: 44px;
+  color: #c3c9dd;
+}
+
+.mandatory-announcement-dialog .empty-placeholder p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ==================== Footer ==================== */
+
+.mandatory-announcement-dialog .dialog-footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ==================== 移动端适配 ==================== */
+
+@media (max-width: 768px) {
+  .mandatory-announcement-dialog .ant-modal {
+    max-width: 95vw !important;
+  }
+
+  .mandatory-announcement-dialog .dialog-header {
+    padding: 20px 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mandatory-announcement-dialog .dialog-header h2 {
+    font-size: 20px;
+  }
+
+  .mandatory-announcement-dialog .ant-modal-body {
+    padding: 16px 20px;
+  }
+
+  .mandatory-announcement-dialog .dialog-content {
+    padding: 16px 18px;
+  }
+
+  .mandatory-announcement-dialog .content-scroll {
+    max-height: 40vh;
+  }
+
+  .mandatory-announcement-dialog .markdown-body {
+    font-size: 14px;
+  }
+
+  .mandatory-announcement-dialog .title-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

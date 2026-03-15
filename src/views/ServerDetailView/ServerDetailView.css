@@ -1,0 +1,23 @@
+.server-detail-view {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecf3 100%);
+  padding: 30px;
+  animation: containerFadeIn 0.8s ease-out;
+}
+
+@keyframes containerFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .server-detail-view {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .server-detail-view {
+    padding: 10px;
+  }
+}

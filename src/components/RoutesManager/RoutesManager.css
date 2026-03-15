@@ -1,0 +1,31 @@
+.routes-manager {
+  margin-top: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.subtitle {
+  color: #909399;
+  font-size: 13px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.loading-container,
+.empty-container {
+  padding: 40px 0;
+  text-align: center;
+}

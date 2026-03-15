@@ -1,0 +1,650 @@
+
+/* ==================== 基础样式 ==================== */
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #1677ff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #4096ff;
+}
+
+body {
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #f5f7fa;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* ==================== Ant Design Dropdown 下拉菜单美化 ==================== */
+
+.ant-dropdown-menu {
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  padding: 8px !important;
+}
+
+.ant-dropdown-menu-item {
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  margin: 4px 0 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: linear-gradient(135deg, rgba(22, 119, 255, 0.1), rgba(22, 119, 255, 0.05)) !important;
+  color: #1677ff !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 4px 15px rgba(22, 119, 255, 0.2) !important;
+}
+
+.ant-dropdown-menu-item .anticon {
+  font-size: 18px !important;
+  opacity: 0.8 !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-dropdown-menu-item:hover .anticon {
+  opacity: 1 !important;
+  transform: scale(1.1) !important;
+}
+
+/* ==================== Ant Design Button 按钮美化 ==================== */
+
+.ant-btn-primary {
+  background-color: #1677ff;
+  border-color: #1677ff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+.ant-btn-primary:hover {
+  background-color: #4096ff !important;
+  border-color: #4096ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.3);
+}
+
+.ant-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ==================== Ant Design Card 卡片美化 ==================== */
+
+.ant-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.ant-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* ==================== Ant Design Input 输入框美化 ==================== */
+
+.ant-input,
+.ant-input-affix-wrapper {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.ant-input:hover,
+.ant-input-affix-wrapper:hover {
+  border-color: #4096ff;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+/* ==================== Ant Design Table 表格美化 ==================== */
+
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.ant-table-thead > tr > th {
+  background-color: #f5f7fa !important;
+  color: #606266 !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid #ebeef5;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: #ecf5ff !important;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #ebeef5;
+  transition: background-color 0.3s ease;
+}
+
+/* ==================== 滚动条美化 ==================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #909399;
+}
+
+/* ==================== Ant Design Message 消息提醒美化 ==================== */
+
+.ant-message-notice-content {
+  min-width: 200px !important;
+  max-width: 500px !important;
+  padding: 12px 20px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  animation: messageSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 成功消息 */
+.ant-message-success .ant-message-notice-content {
+  background: rgba(240, 249, 235, 0.95) !important;
+  border: 1px solid #e1f3d8 !important;
+  border-left: 4px solid #52c41a !important;
+}
+
+.ant-message-success .anticon {
+  color: #52c41a !important;
+  font-size: 18px !important;
+}
+
+/* 错误消息 */
+.ant-message-error .ant-message-notice-content {
+  background: rgba(253, 246, 246, 0.95) !important;
+  border: 1px solid #fde2e2 !important;
+  border-left: 4px solid #ff4d4f !important;
+}
+
+.ant-message-error .anticon {
+  color: #ff4d4f !important;
+  font-size: 18px !important;
+}
+
+/* 警告消息 */
+.ant-message-warning .ant-message-notice-content {
+  background: rgba(253, 251, 245, 0.95) !important;
+  border: 1px solid #faecd8 !important;
+  border-left: 4px solid #faad14 !important;
+}
+
+.ant-message-warning .anticon {
+  color: #faad14 !important;
+  font-size: 18px !important;
+}
+
+/* 信息消息 */
+.ant-message-info .ant-message-notice-content {
+  background: rgba(244, 247, 252, 0.95) !important;
+  border: 1px solid #d3e3fd !important;
+  border-left: 4px solid #1677ff !important;
+}
+
+.ant-message-info .anticon {
+  color: #1677ff !important;
+  font-size: 18px !important;
+}
+
+/* 消息文本 */
+.ant-message-notice-content .ant-message-custom-content {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.ant-message-notice-content .ant-message-custom-content span:last-child {
+  font-weight: 500 !important;
+  letter-spacing: 0.2px !important;
+}
+
+/* 移动端消息 */
+@media (max-width: 768px) {
+  .ant-message-notice-content {
+    min-width: 200px !important;
+    max-width: calc(100vw - 40px) !important;
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+  }
+
+  .ant-message-notice-content .anticon {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ant-message-notice-content {
+    min-width: 150px !important;
+    max-width: calc(100vw - 20px) !important;
+    padding: 8px 14px !important;
+    font-size: 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .ant-message-notice-content .anticon {
+    font-size: 14px !important;
+  }
+}
+
+/* ==================== Ant Design Notification 通知美化 ==================== */
+
+.ant-notification-notice {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  padding: 20px !important;
+  min-width: 280px !important;
+  max-width: 400px !important;
+  width: auto !important;
+  animation: notificationSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden !important;
+}
+
+@keyframes notificationSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* 通知标题 */
+.ant-notification-notice-message {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.4 !important;
+}
+
+/* 通知内容 */
+.ant-notification-notice-description {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+/* 通知图标 */
+.ant-notification-notice-icon {
+  font-size: 22px !important;
+  margin-top: 2px !important;
+}
+
+/* 通知关闭按钮 */
+.ant-notification-notice-close {
+  color: rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-notification-notice-close:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+  transform: scale(1.1) !important;
+}
+
+/* 成功通知 */
+.ant-notification-notice-success {
+  background: rgba(240, 249, 235, 0.98) !important;
+  border: 1px solid #e1f3d8 !important;
+  border-left: 4px solid #52c41a !important;
+}
+
+.ant-notification-notice-success .ant-notification-notice-message {
+  color: #52c41a !important;
+}
+
+.ant-notification-notice-success .ant-notification-notice-description {
+  color: #5a6c47 !important;
+}
+
+.ant-notification-notice-success .ant-notification-notice-icon {
+  color: #52c41a !important;
+}
+
+/* 错误通知 */
+.ant-notification-notice-error {
+  background: rgba(253, 246, 246, 0.98) !important;
+  border: 1px solid #fde2e2 !important;
+  border-left: 4px solid #ff4d4f !important;
+}
+
+.ant-notification-notice-error .ant-notification-notice-message {
+  color: #ff4d4f !important;
+}
+
+.ant-notification-notice-error .ant-notification-notice-description {
+  color: #c45656 !important;
+}
+
+.ant-notification-notice-error .ant-notification-notice-icon {
+  color: #ff4d4f !important;
+}
+
+/* 警告通知 */
+.ant-notification-notice-warning {
+  background: rgba(253, 251, 245, 0.98) !important;
+  border: 1px solid #faecd8 !important;
+  border-left: 4px solid #faad14 !important;
+}
+
+.ant-notification-notice-warning .ant-notification-notice-message {
+  color: #faad14 !important;
+}
+
+.ant-notification-notice-warning .ant-notification-notice-description {
+  color: #b58230 !important;
+}
+
+.ant-notification-notice-warning .ant-notification-notice-icon {
+  color: #faad14 !important;
+}
+
+/* 信息通知 */
+.ant-notification-notice-info {
+  background: rgba(244, 247, 252, 0.98) !important;
+  border: 1px solid #d3e3fd !important;
+  border-left: 4px solid #1677ff !important;
+}
+
+.ant-notification-notice-info .ant-notification-notice-message {
+  color: #1677ff !important;
+}
+
+.ant-notification-notice-info .ant-notification-notice-description {
+  color: #337ecc !important;
+}
+
+.ant-notification-notice-info .ant-notification-notice-icon {
+  color: #1677ff !important;
+}
+
+/* 移动端通知 */
+@media (max-width: 768px) {
+  .ant-notification-notice {
+    min-width: 250px !important;
+    max-width: calc(100vw - 40px) !important;
+    padding: 16px !important;
+    border-radius: 10px !important;
+  }
+
+  .ant-notification-notice-message {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .ant-notification-notice-description {
+    font-size: 13px !important;
+  }
+
+  .ant-notification-notice-icon {
+    font-size: 18px !important;
+  }
+
+  .ant-notification-notice-close {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ant-notification-notice {
+    min-width: 200px !important;
+    max-width: calc(100vw - 20px) !important;
+    padding: 14px !important;
+    border-radius: 8px !important;
+  }
+
+  .ant-notification-notice-message {
+    font-size: 13px !important;
+  }
+
+  .ant-notification-notice-description {
+    font-size: 12px !important;
+  }
+
+  .ant-notification-notice-icon {
+    font-size: 16px !important;
+  }
+}
+
+/* ==================== Ant Design Modal 弹窗美化 ==================== */
+
+.ant-modal-content {
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.ant-modal-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px !important;
+}
+
+.ant-modal-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.ant-modal-body {
+  padding: 24px !important;
+}
+
+.ant-modal-footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 12px 24px !important;
+}
+
+/* ==================== Ant Design Tag 标签美化 ==================== */
+
+.ant-tag {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+/* ==================== Ant Design Tabs 标签页美化 ==================== */
+
+.ant-tabs-tab {
+  transition: all 0.3s ease !important;
+  font-weight: 500 !important;
+}
+
+.ant-tabs-tab:hover {
+  color: #1677ff !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1677ff !important;
+  font-weight: 600 !important;
+}
+
+/* ==================== Ant Design Select 选择器美化 ==================== */
+
+.ant-select-dropdown {
+  border-radius: 8px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+  padding: 4px !important;
+}
+
+.ant-select-item {
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-select-item-option-active {
+  background-color: rgba(22, 119, 255, 0.06) !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: rgba(22, 119, 255, 0.1) !important;
+  font-weight: 600 !important;
+}
+
+/* ==================== Ant Design Tooltip 提示美化 ==================== */
+
+.ant-tooltip-inner {
+  border-radius: 8px !important;
+  padding: 8px 14px !important;
+  font-size: 13px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==================== 页面过渡动画 ==================== */
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ==================== Ant Design Popconfirm 气泡确认框美化 ==================== */
+
+.ant-popconfirm .ant-popover-inner {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  padding: 16px !important;
+}
+
+/* ==================== Ant Design Badge 徽标美化 ==================== */
+
+.ant-badge-count {
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.4) !important;
+}
+
+/* ==================== Ant Design Switch 开关美化 ==================== */
+
+.ant-switch {
+  transition: all 0.3s ease !important;
+}
+
+.ant-switch-checked {
+  background-color: #1677ff !important;
+}
+
+/* ==================== Ant Design Progress 进度条美化 ==================== */
+
+.ant-progress-bg {
+  border-radius: 100px !important;
+  transition: all 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) !important;
+}
+
+.ant-modal-body {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(144, 147, 153, 0.3) transparent;
+}
+
+.ant-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ant-modal-body::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.3);
+  border-radius: 3px;
+}
+
+.ant-modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.5);
+}
+
+.configure-dialog {
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch; 
+}

@@ -1,0 +1,270 @@
+.terminal-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1a1b26;
+}
+
+/* ==================== 顶部工具栏 ==================== */
+
+.terminal-wrapper > .terminal-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: #24283b;
+  border-bottom: 1px solid #3d3d3d;
+  flex-shrink: 0;
+}
+
+.terminal-settings {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.terminal-settings .ant-select-selector {
+  background: #1a1b26 !important;
+  border-color: #3d59a1 !important;
+  color: #c0caf5 !important;
+}
+
+.terminal-settings .ant-select-selection-item {
+  color: #c0caf5 !important;
+}
+
+.font-size-controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.font-size-controls .ant-btn {
+  background: #3b4261;
+  border-color: #3d59a1;
+  color: #c0caf5;
+}
+
+.font-size-controls .ant-btn:hover:not(:disabled) {
+  background: #4b5271;
+  border-color: #7aa2f7;
+  color: #c0caf5;
+}
+
+.font-size-controls .ant-btn:disabled {
+  background: #2a2e3f;
+  border-color: #2a2e3f;
+  color: #565f89;
+}
+
+.font-size-controls .ant-btn-primary {
+  background: #7aa2f7 !important;
+  border-color: #7aa2f7 !important;
+  color: #1a1b26 !important;
+}
+
+/* ==================== 移动端工具栏 ==================== */
+
+.mobile-toolbar-compact {
+  background: #24283b;
+  border-bottom: 1px solid #3d3d3d;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.toolbar-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  align-items: center;
+}
+
+.toolbar-row:last-child {
+  margin-bottom: 0;
+}
+
+.direction-compact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.direction-lr {
+  display: flex;
+  gap: 4px;
+}
+
+.control-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+}
+
+.commands-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.compact-btn {
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  height: 28px !important;
+  background: #3b4261 !important;
+  border-color: #3d59a1 !important;
+  color: #c0caf5 !important;
+  border-radius: 4px !important;
+}
+
+.compact-btn:hover {
+  background: #4b5271 !important;
+}
+
+.direction-btn {
+  min-width: 36px !important;
+  text-align: center;
+}
+
+.escape-btn {
+  background: #f7768e !important;
+  border-color: #f7768e !important;
+  color: #fff !important;
+}
+
+.escape-btn:hover {
+  background: #ff8fa0 !important;
+}
+
+.ctrl-btn {
+  background: #e0af68 !important;
+  border-color: #e0af68 !important;
+  color: #1a1b26 !important;
+}
+
+.ctrl-btn:hover {
+  background: #ecc37b !important;
+}
+
+.cmd-btn {
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+/* ==================== 桌面端命令工具栏 ==================== */
+
+.desktop-toolbar {
+  background: #24283b;
+  border-bottom: 1px solid #3d3d3d;
+  padding: 12px;
+  flex-shrink: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.command-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.command-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.section-title {
+  font-size: 12px;
+  color: #7aa2f7;
+  font-weight: 600;
+  min-width: 70px;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.command-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.command-buttons .ant-btn {
+  background: #3b4261;
+  border-color: #3d59a1;
+  color: #c0caf5;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 12px;
+}
+
+.command-buttons .ant-btn:hover {
+  background: #4b5271;
+  border-color: #7aa2f7;
+  color: #c0caf5;
+}
+
+/* ==================== 终端容器 ==================== */
+
+.terminal-container {
+  flex: 1;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.terminal-container .xterm {
+  height: 100%;
+  padding: 4px;
+}
+
+/* ==================== 自定义滚动条（暗色主题） ==================== */
+
+.desktop-toolbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.desktop-toolbar::-webkit-scrollbar-track {
+  background: #1a1b26;
+}
+
+.desktop-toolbar::-webkit-scrollbar-thumb {
+  background: #3d59a1;
+  border-radius: 3px;
+}
+
+.desktop-toolbar::-webkit-scrollbar-thumb:hover {
+  background: #7aa2f7;
+}
+
+/* ==================== 响应式 ==================== */
+
+@media (max-width: 768px) {
+  .terminal-wrapper > .terminal-toolbar {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px 8px;
+  }
+
+  .terminal-settings {
+    order: 2;
+    width: 100%;
+  }
+
+  .font-size-controls {
+    order: 1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .terminal-container {
+    min-height: 200px;
+  }
+
+  .command-section {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .section-title {
+    min-width: unset;
+  }
+}

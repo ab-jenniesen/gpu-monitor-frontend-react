@@ -1,0 +1,113 @@
+.gpu-monitor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==================== GPU 卡片 ==================== */
+
+.gpu-card {
+  border-radius: 12px;
+}
+
+.gpu-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gpu-card .card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.model-name {
+  color: #2563eb;
+}
+
+/* ==================== 统计行 ==================== */
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.stat-row:last-child {
+  margin-bottom: 0;
+}
+
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 110px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.stat-label .anticon {
+  font-size: 16px;
+  color: #3b82f6;
+}
+
+.stat-value {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-value .ant-progress {
+  margin-bottom: 0;
+}
+
+/* Progress 文字不换行 */
+.stat-value .ant-progress-text {
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+/* ==================== 进程区域 ==================== */
+
+.processes-section {
+  margin-top: 16px;
+}
+
+.section-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.processes-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* 表格斑马纹 */
+.table-row-odd {
+  background-color: #fafafa;
+}
+
+/* ==================== 移动端适配 ==================== */
+
+@media (max-width: 768px) {
+  .stat-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .stat-label {
+    min-width: auto;
+  }
+
+  .stat-value {
+    width: 100%;
+  }
+}

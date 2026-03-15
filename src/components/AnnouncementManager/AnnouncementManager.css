@@ -1,0 +1,69 @@
+.announcement-manager {
+  padding: 20px;
+}
+
+.content-preview {
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* ==================== 编辑器 ==================== */
+
+.editor-container {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+
+.editor-tabs {
+  padding: 8px 15px;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: #fafafa;
+}
+
+.editor-wrapper,
+.preview-wrapper {
+  min-height: 400px;
+}
+
+.markdown-preview {
+  padding: 15px;
+  min-height: 400px;
+}
+
+.markdown-tips {
+  padding: 8px 15px;
+  background-color: #fafafa;
+  border-top: 1px solid #d9d9d9;
+  font-size: 12px;
+  color: #999;
+}
+
+.markdown-tips code {
+  background-color: #e6e6e6;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+/* ==================== 表单 ==================== */
+
+.announcement-form {
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* ==================== Quill 覆盖 ==================== */
+
+.announcement-manager .ql-container {
+  min-height: 250px;
+  font-size: 14px;
+}
+
+.announcement-manager .ql-editor {
+  min-height: 250px;
+}

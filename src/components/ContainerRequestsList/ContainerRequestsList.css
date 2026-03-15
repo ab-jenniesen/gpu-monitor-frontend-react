@@ -1,0 +1,15 @@
+.container-requests-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.requests-table-wrapper {
+  flex: 1;
+  overflow: auto;
+}
+
+.resource-config {
+  font-size: 13px;
+  line-height: 1.4;
+}

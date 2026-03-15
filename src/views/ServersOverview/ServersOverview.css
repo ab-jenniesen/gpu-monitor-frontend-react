@@ -1,0 +1,162 @@
+.servers-overview-wrapper { padding: 0; }
+.servers-overview { max-width: 1600px; margin: 0 auto; }
+.servers-overview.embedded-mode { padding: 0; }
+.main-content { padding: 20px; }
+.embedded-main { padding: 0; }
+
+/* 加载/错误 */
+.loading-container, .error-container { padding: 40px 20px; text-align: center; }
+
+/* 全局指标 */
+.global-metrics-container { margin-bottom: 20px; }
+.global-metrics-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+.global-metrics-title { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
+.global-metrics-meta { display: flex; align-items: center; gap: 8px; }
+.global-metrics-updated { font-size: 12px; color: #909399; }
+.global-gauge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; text-align: center; }
+.gauge-item { display: flex; flex-direction: column; align-items: center; }
+.gauge-title { font-size: 14px; font-weight: 600; color: #303133; margin-bottom: 8px; }
+.gauge-subtitle { font-size: 12px; color: #909399; margin-top: 4px; }
+
+/* 报表 */
+.process-report-container { margin-bottom: 20px; }
+.process-report-body { display: flex; gap: 24px; }
+.process-report-body--loading { display: flex; gap: 24px; }
+.process-report-main { flex: 1; min-width: 0; }
+.process-report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.process-report-title { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
+.process-report-meta { font-size: 12px; color: #909399; }
+.process-report-summary { margin-top: 12px; }
+.report-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.report-item { background: #f7f8fa; border-radius: 8px; padding: 14px; text-align: center; }
+.report-label { font-size: 13px; color: #909399; margin-bottom: 6px; }
+.report-value { font-size: 18px; font-weight: 700; color: #303133; }
+.report-hint { font-size: 11px; color: #c0c4cc; margin-top: 4px; }
+
+/* 排行榜 */
+.process-report-ranking { width: 300px; flex-shrink: 0; border-left: 1px solid #f0f0f0; padding-left: 20px; }
+.process-report-ranking.ranking-empty { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.ranking-title { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+.ranking-list { display: flex; flex-direction: column; gap: 8px; }
+.ranking-item { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; background: #fafafa; }
+.ranking-index { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; background: #f0f0f0; color: #606266; }
+.ranking-index.top-three { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #fff; }
+.ranking-info { flex: 1; min-width: 0; }
+.ranking-header { display: flex; align-items: center; gap: 6px; }
+.ranking-name { font-size: 13px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ranking-group { font-size: 11px; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+.group-undergrad { background: #e8f5e9; color: #2e7d32; }
+.group-master { background: #e3f2fd; color: #1565c0; }
+.group-phd { background: #fff3e0; color: #e65100; }
+.group-teacher { background: #fce4ec; color: #c62828; }
+.group-unassigned { background: #f5f5f5; color: #757575; }
+.ranking-stats { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #909399; margin-top: 2px; }
+.ranking-divider { color: #ddd; }
+.ranking-placeholder { text-align: center; color: #c0c4cc; padding: 20px; }
+
+/* 服务器网格 */
+.servers-grid { display: flex; flex-direction: column; gap: 20px; }
+.server-card { border-radius: 12px; overflow: hidden; position: relative; }
+.server-card.offline-server { opacity: 0.6; }
+
+/* 离线覆盖 */
+.offline-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 10; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+.offline-message { text-align: center; color: #fff; }
+.offline-icon { font-size: 32px; margin-bottom: 8px; }
+.offline-server-name { font-size: 16px; font-weight: 600; }
+.offline-text { font-size: 14px; margin-top: 4px; }
+.offline-time { font-size: 12px; color: #ccc; margin-top: 4px; }
+
+/* 服务器头部 */
+.server-header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 16px; }
+.server-title h2 { margin: 0; font-size: 18px; }
+.server-system-info { display: flex; gap: 16px; font-size: 13px; color: #909399; }
+.server-actions { margin-left: auto; display: flex; gap: 8px; }
+
+/* 监控区块 */
+.monitor-section { padding: 12px 0; }
+.section-title { display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 600; margin: 0 0 12px; color: #303133; }
+.section-subtitle { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin: 12px 0 8px; color: #606266; }
+.stat-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.stat-row .stat-label { font-size: 13px; color: #606266; white-space: nowrap; min-width: 70px; }
+.stat-row .ant-progress { flex: 1; }
+.no-data, .no-data-small { text-align: center; color: #c0c4cc; padding: 12px; font-size: 13px; }
+
+/* CPU 信息 */
+.cpu-info { margin-bottom: 12px; }
+.cpu-header { margin-bottom: 8px; }
+.cpu-model { font-size: 13px; font-weight: 600; color: #303133; }
+.cpu-arch { font-size: 12px; color: #909399; }
+.cpu-metrics { display: flex; flex-direction: column; gap: 6px; }
+.cpu-metrics .metric-item { display: flex; align-items: center; gap: 8px; }
+.cpu-metrics .metric-icon { font-size: 16px; }
+.cpu-metrics .metric-label { font-size: 12px; color: #909399; }
+.cpu-metrics .metric-value { font-size: 13px; }
+.cpu-metrics .main-value { font-weight: 600; color: #303133; }
+.cpu-metrics .sub-value { color: #909399; font-size: 12px; margin-left: 2px; }
+
+/* GPU */
+.gpu-item { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #f0f0f0; }
+.gpu-item:last-child { border-bottom: none; }
+.gpu-header { margin-bottom: 8px; }
+.gpu-name { display: flex; align-items: center; gap: 8px; }
+.gpu-model { font-size: 13px; font-weight: 600; }
+.gpu-id { font-size: 11px; color: #909399; }
+.gpu-processes { margin-top: 8px; }
+.process-header { font-size: 12px; font-weight: 600; color: #606266; margin-bottom: 4px; }
+.table-badge { padding: 2px 6px; border-radius: 4px; background: #f0f7ff; font-size: 12px; }
+.table-badge.gpu-usage { background: #fef0f0; }
+
+/* 网络卡片 */
+.network-info { margin-bottom: 12px; }
+.network-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+.network-card { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #f7f8fa; border-radius: 8px; }
+.network-icon { font-size: 18px; }
+.network-label { font-size: 11px; color: #909399; }
+.network-value { font-size: 13px; font-weight: 500; color: #303133; word-break: break-all; }
+
+/* IO 汇总 */
+.container-summary-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.summary-card { padding: 12px; border-radius: 8px; background: #f7f8fa; }
+.summary-header { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.summary-icon { font-size: 16px; }
+.summary-title { font-size: 13px; font-weight: 600; }
+.summary-metrics .metric-row { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; }
+.summary-metrics .metric-label { color: #909399; }
+.summary-metrics .metric-value { display: flex; gap: 8px; }
+.upload-value, .upload-rate, .read-value, .read-rate { color: #e6a23c; }
+.download-value, .download-rate, .write-value, .write-rate { color: #409eff; }
+
+/* 容器名称 */
+.container-name-cell { display: flex; align-items: center; gap: 4px; }
+
+/* 流量显示 */
+.traffic-double { display: flex; flex-direction: column; gap: 2px; }
+.traffic-row { display: flex; justify-content: space-between; }
+.traffic-cell { display: flex; align-items: center; gap: 2px; }
+.traffic-cell--down { justify-content: flex-end; }
+.traffic-icon { font-size: 10px; }
+.traffic-icon--upload, .traffic-icon--read { color: #e6a23c; }
+.traffic-icon--download, .traffic-icon--write { color: #409eff; }
+.traffic-value { font-size: 12px; }
+.traffic-value--upload, .traffic-value--read { color: #e6a23c; }
+.traffic-value--download, .traffic-value--write { color: #409eff; }
+.traffic-value--muted { color: #c0c4cc; font-size: 11px; }
+.traffic-row--muted { opacity: 0.7; }
+
+/* 磁盘 */
+.disk-info { display: flex; flex-direction: column; gap: 6px; }
+.disk-item { margin-bottom: 4px; }
+.disk-label { font-size: 12px; color: #606266; margin-bottom: 2px; }
+
+/* 空状态 */
+.empty-container { text-align: center; }
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .main-content { padding: 12px; }
+  .process-report-body { flex-direction: column; }
+  .process-report-ranking { width: 100%; border-left: none; padding-left: 0; border-top: 1px solid #f0f0f0; padding-top: 16px; }
+  .global-gauge-grid { grid-template-columns: repeat(3, 1fr); }
+  .container-summary-cards { grid-template-columns: 1fr; }
+}

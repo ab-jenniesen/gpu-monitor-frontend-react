@@ -1,0 +1,193 @@
+.danmaku-chat {
+  position: relative;
+}
+
+/* ==================== 弹幕显示区域 ==================== */
+
+.danmaku-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.danmaku-container.show {
+  opacity: 1;
+}
+
+.danmaku-message {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.8),
+    -1px -1px 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  will-change: transform;
+  line-height: 1.5;
+}
+
+/* ==================== 聊天控制面板 ==================== */
+
+.chat-controls {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.chat-panel {
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px;
+  width: 360px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-header h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+}
+
+.online-count {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.chat-header .ant-btn-link {
+  color: #94a3b8 !important;
+}
+
+.chat-header .ant-btn-link:hover {
+  color: #fff !important;
+}
+
+/* ==================== 消息输入区域 ==================== */
+
+.message-input-area {
+  margin-bottom: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.input-row .ant-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+.input-row .ant-input::placeholder {
+  color: #94a3b8;
+}
+
+.input-row .ant-input:focus {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+}
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-row > span {
+  font-size: 13px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.color-picker {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+.color-option.active {
+  border-color: #fff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  transform: scale(1.15);
+}
+
+/* ==================== 连接状态 ==================== */
+
+.connection-status {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ==================== 弹幕控制按钮 ==================== */
+
+.danmaku-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.danmaku-main-btn {
+  border-radius: 20px !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.danmaku-visibility-btn {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.visibility-icon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* ==================== 响应式 ==================== */
+
+@media (max-width: 768px) {
+  .chat-panel {
+    width: calc(100vw - 40px);
+    max-width: 360px;
+  }
+
+  .danmaku-controls {
+    bottom: 16px;
+    right: 16px;
+  }
+}

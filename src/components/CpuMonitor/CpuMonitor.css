@@ -1,0 +1,198 @@
+.cpu-monitor {
+  width: 100%;
+}
+
+.cpu-card {
+  border-radius: 12px;
+}
+
+.cpu-card .card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ==================== CPU 基本信息 ==================== */
+
+.cpu-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.model-name {
+  font-size: 0.9rem;
+  color: #1f2937;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* ==================== 分割线 ==================== */
+
+.section-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0;
+}
+
+/* ==================== 统计行（进度条） ==================== */
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 110px;
+}
+
+.stat-label .anticon {
+  font-size: 16px;
+  color: #3b82f6;
+}
+
+.stat-value {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-value .ant-progress {
+  margin: 0;
+}
+
+/* 进度条文字不换行 */
+.stat-value .ant-progress-text {
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+/* ==================== CPU 核心 ==================== */
+
+.cpu-monitor h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px 0;
+}
+
+.cpu-cores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.core-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.core-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  white-space: nowrap;
+  min-width: 50px;
+}
+
+.core-item .ant-progress {
+  flex: 1;
+  margin: 0;
+}
+
+/* ==================== 系统信息 ==================== */
+
+.system-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+/* ==================== 磁盘信息 ==================== */
+
+.disk-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.disk-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.disk-label {
+  font-size: 0.85rem;
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 80px;
+  font-family: monospace;
+}
+
+.disk-item .ant-progress {
+  flex: 1;
+  margin: 0;
+}
+
+/* ==================== 移动端适配 ==================== */
+
+@media (max-width: 768px) {
+  .cpu-info,
+  .system-info {
+    grid-template-columns: 1fr;
+  }
+
+  .cpu-cores {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .stat-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .stat-value {
+    width: 100%;
+  }
+
+  .disk-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .disk-item .ant-progress {
+    width: 100%;
+  }
+}

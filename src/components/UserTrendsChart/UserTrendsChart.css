@@ -1,0 +1,269 @@
+/* ==================== 对话框整体 ==================== */
+
+.trends-dialog .ant-modal-content {
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0;
+}
+
+.trends-dialog .ant-modal-body {
+  padding: 0;
+}
+
+/* ==================== 自定义头部 ==================== */
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-avatar {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-text h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.header-text p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 头部下拉框 */
+.header-controls .ant-select .ant-select-selector {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  backdrop-filter: blur(10px);
+}
+
+.header-controls .ant-select .ant-select-selection-item {
+  color: white !important;
+}
+
+.header-controls .ant-select .ant-select-arrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 头部按钮 */
+.header-btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  backdrop-filter: blur(10px);
+}
+
+.header-btn:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: scale(1.05);
+}
+
+.header-close-btn {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+}
+
+.header-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.05);
+}
+
+/* ==================== 内容区域 ==================== */
+
+.trends-content {
+  min-height: 400px;
+  padding: 24px;
+}
+
+.charts-content {
+  padding: 0;
+}
+
+/* ==================== 图表卡片 ==================== */
+
+.chart-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #f1f3f4;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.chart-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+}
+
+.cpu-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gpu-icon {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.memory-icon {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.chart-title h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.chart-title p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.chart-body {
+  flex: 1;
+  padding: 0 16px 16px 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.chart-container {
+  width: 100% !important;
+  height: 280px !important;
+  min-width: 0;
+}
+
+/* ==================== 空数据 ==================== */
+
+.empty-data {
+  text-align: center;
+  padding: 60px 0;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #f1f3f4;
+}
+
+/* ==================== 响应式 ==================== */
+
+@media (max-width: 1200px) {
+  .chart-card {
+    height: 360px;
+  }
+  .chart-container {
+    height: 320px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dialog-header {
+    padding: 16px 20px;
+  }
+
+  .header-left {
+    gap: 12px;
+  }
+
+  .header-text h3 {
+    font-size: 18px;
+  }
+
+  .trends-content {
+    padding: 16px;
+  }
+
+  .header-controls {
+    gap: 8px;
+  }
+
+  .header-controls .ant-select {
+    width: 100px !important;
+  }
+
+  .charts-content .ant-col {
+    margin-bottom: 20px;
+  }
+
+  .chart-card {
+    height: 320px;
+  }
+
+  .chart-header {
+    padding: 16px;
+  }
+
+  .chart-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .chart-title h4 {
+    font-size: 14px;
+  }
+
+  .chart-body {
+    padding: 0 12px 12px 12px;
+  }
+
+  .chart-container {
+    height: 260px !important;
+  }
+}

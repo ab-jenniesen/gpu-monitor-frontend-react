@@ -1,0 +1,332 @@
+.user-container {
+  padding: 20px;
+}
+
+.main-content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.equal-height-cards {
+  margin-bottom: 20px;
+}
+
+/* ==================== 欢迎卡片 ==================== */
+
+.welcome-card-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.welcome-card-header {
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #f0f0f0;
+  color: #303133;
+}
+
+.welcome-card-body {
+  padding: 24px 20px;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-content h3 {
+  margin: 12px 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #303133;
+}
+
+.welcome-content p {
+  color: #909399;
+  font-size: 14px;
+  margin: 8px 0 16px;
+}
+
+.user-avatar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-group-tag {
+  margin-bottom: 4px;
+}
+
+/* ==================== 资源统计 ==================== */
+
+.resource-stats {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f7f8fa;
+  margin-bottom: 8px;
+}
+
+.stat-item .anticon {
+  font-size: 20px;
+  color: #409eff;
+}
+
+.stat-info {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #303133;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #909399;
+}
+
+/* 资源详情统计 */
+.resource-detail-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.stat-item-detailed {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f7f8fa;
+  border-radius: 8px;
+}
+
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.stat-icon.cpu { background: linear-gradient(135deg, #667eea, #764ba2); }
+.stat-icon.gpu { background: linear-gradient(135deg, #f5576c, #ff6b6b); }
+.stat-icon.memory { background: linear-gradient(135deg, #00f2fe, #4facfe); }
+
+.stat-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #303133;
+}
+
+.stat-data .stat-label {
+  font-size: 12px;
+  color: #909399;
+}
+
+/* ==================== 右侧面板通用卡片样式 ==================== */
+
+.quick-access-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trends-card,
+.process-report-card,
+.containers-card,
+.requests-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.trends-card-header,
+.process-report-card-header,
+.containers-card-header,
+.requests-card-header {
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #f0f0f0;
+  color: #303133;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trends-card-body,
+.process-report-card-body,
+.containers-card-body,
+.requests-card-body {
+  padding: 20px;
+}
+
+/* ==================== 图表控件 ==================== */
+
+.chart-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trends-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.chart-item h4 {
+  text-align: center;
+  font-size: 14px;
+  color: #606266;
+  margin: 0 0 8px;
+}
+
+/* ==================== 报表 ==================== */
+
+.process-report-meta {
+  font-size: 12px;
+  color: #909399;
+  font-weight: normal;
+}
+
+.process-report-tabs {
+  margin-bottom: 16px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.report-item {
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.report-label {
+  font-size: 13px;
+  color: #909399;
+  margin-bottom: 6px;
+}
+
+.report-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #303133;
+}
+
+.report-table-wrapper {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+/* ==================== 可折叠服务器卡片 ==================== */
+
+.my-servers-section,
+.server-overview-section {
+  margin-top: 20px;
+}
+
+.servers-card.collapsible-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.server-overview-header {
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #f0f0f0;
+  color: #303133;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.server-overview-header:hover {
+  background-color: #fafafa;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-with-icon .anticon {
+  font-size: 18px;
+  color: #409eff;
+}
+
+.expand-icon {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+  color: #909399;
+}
+
+.expand-icon.is-expanded {
+  transform: rotate(180deg);
+}
+
+.servers-card-body {
+  padding: 20px;
+}
+
+/* ==================== 响应式 ==================== */
+
+@media (max-width: 768px) {
+  .user-container {
+    padding: 12px;
+  }
+
+  .report-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-content .ant-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 16px;
+  }
+
+  .resource-detail-stats {
+    flex-direction: column;
+  }
+}
